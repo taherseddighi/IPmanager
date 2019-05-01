@@ -8,7 +8,7 @@ from web.models import User, Available_Public_IP
 
 # Create your views here.
 
-CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = False
 def submit_Available_Public_IP(request):
     #validate data later
     #this_token = request.POST['token']
