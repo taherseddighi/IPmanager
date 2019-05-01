@@ -14,7 +14,7 @@ def submit_Available_Public_IP(request):
     this_token = request.POST['token']
     this_user = User.objects.filter(token__token=this_token).get()
     now = datetime.now()
-    Available_Public_IP.objects.Create(User=this_user, IP=request.POST['IP'], date_start=now)
+    Available_Public_IP.objects.create(user=this_user, IP=request.POST['IP'], date_start=now)
     print('HI Can you See Me ? I am Here. Holllaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
     print(request.POST)
 
