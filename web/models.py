@@ -32,10 +32,9 @@ class Used_Public_IP(models.Model):
 
 class Used_Private_IP(models.Model):
     IP = models.CharField(max_length=255, null=True) 
-    Device = models.CharField(max_length=255, null=True, blank=True)
+    device = models.CharField(max_length=255, null=True, blank=True)
     date_start = models.DateTimeField(null=True, blank=True)
     date_expire = models.DateTimeField(null=True, blank=True)
-    price_bought = models.BigIntegerField(null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     description = models.CharField(max_length=255, null=True, blank=True)
     def __str__(self):
